@@ -4,6 +4,127 @@
             box-sizing: border-box;
         }
 
+        /* ========================= */
+        /* NAVBAR */
+        /* ========================= */
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+
+            padding: 18px 6%;
+
+            background: rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(14px);
+
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+            z-index: 1000;
+        }
+
+        /* DARK MODE */
+        body.dark-theme .navbar {
+            background: rgba(15, 23, 42, 0.85);
+        }
+
+        /* LOGO */
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #38bdf8;
+        }
+
+        .logo span {
+            color: #0ea5e9;
+        }
+
+        /* NAV LINKS */
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 22px;
+
+            list-style: none;
+            flex-wrap: wrap;
+        }
+
+        /* LINK STYLE */
+        .nav-links a {
+            text-decoration: none;
+            color: #0f172a;
+            font-weight: 600;
+            font-size: 1rem;
+
+            position: relative;
+            transition: 0.3s ease;
+        }
+
+        /* DARK MODE LINKS */
+        body.dark-theme .nav-links a {
+            color: #f1f5f9;
+        }
+
+        /* HOVER */
+        .nav-links a:hover {
+            color: #38bdf8;
+        }
+
+        /* UNDERLINE EFFECT */
+        .nav-links a::after {
+            content: "";
+
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+
+            width: 0%;
+            height: 2px;
+
+            background: #38bdf8;
+
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* MOBILE */
+        @media (max-width: 768px) {
+
+            .navbar {
+                justify-content: center;
+                gap: 15px;
+                padding: 15px;
+            }
+
+            .nav-links {
+                justify-content: center;
+                gap: 14px;
+            }
+
+            .nav-links a {
+                font-size: 0.9rem;
+            }
+
+            .logo {
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        #theme-toggle {
+            top: 90px;
+            right: 20px;
+        }
+
         body {
             font-family: 'Poppins', sans-serif;
             background: #f8fafc;
