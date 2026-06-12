@@ -22,11 +22,13 @@
 
         <img src="che.jpeg" alt="Chetan" class="profile-img">
 
-        <h1>Chetan Patil</h1>
+        <h1><span>Chetan Patil</span></h1>
 
-        <p class="hero-title">
-            MCA Student • <span>Full Stack Web Developer</span> • Programmer
-        </p>
+      <p class="hero-title">
+    MCA Student •
+    <span>Full Stack Web Developer</span>
+    • Programmer
+</p>
 
     </header>
 
@@ -37,18 +39,18 @@
 
         <div class="card">
 
-            <pre>
-    I’m an MCA student with a strong passion for web development and building modern, user-friendly
-    applications. I have hands-on experience with front-end and back-end technologies including HTML, CSS,
-    JavaScript, React.js, MongoDB, Express.js, and Node.js (MERN Stack).
+            <p>
+                I’m an MCA student with a strong passion for web development and building modern, user-friendly
+                applications. I have hands-on experience with front-end and back-end technologies including HTML, CSS,
+                JavaScript, React.js, MongoDB, Express.js, and Node.js (MERN Stack).
 
-     I also have a solid understanding of Object-Oriented Programming concepts and programming languages like
-    Java and C++. I enjoy learning new technologies, solving real-world problems through code, and
-    continuously improving my development skills.
-  
-    Passionate about creating responsive and efficient web applications, I am eager to grow as a full-stack
-    developer and contribute to innovative projects and collaborative teams
-            </pre>
+                I also have a solid understanding of Object-Oriented Programming concepts and programming languages like
+                Java and C++. I enjoy learning new technologies, solving real-world problems through code, and
+                continuously improving my development skills.
+
+                Passionate about creating responsive and efficient web applications, I am eager to grow as a full-stack
+                developer and contribute to innovative projects and collaborative teams
+            </p>
 
         </div>
 
@@ -121,7 +123,7 @@
 
         <div class="card">
 
-            <h3>🚀 User Management REST API</h3>
+            <h3>🚀 User Management System</h3>
 
             <p>
                 🚀 Excited to share that I successfully completed As part of my internship project, I developed a
@@ -204,7 +206,7 @@
 
         <div class="photo-grid">
 
-            <img src="ph4.jpg" alt="Photo 1">
+            <img src="ph4.jpeg" alt="Photo 1">
 
             <img src="ph3.jpeg" alt="Photo 2" class="top-photo">
 
@@ -250,7 +252,7 @@
     <!-- FOOTER -->
     <footer>
 
-        <p>© 2026 Chetan Patil | All Rights Reserved</p>
+        <p>© 2026 Chetan Patil |  Full   Stack      Developer   | All Rights Reserved</p>
 
     </footer>
 
@@ -274,8 +276,26 @@
             }
 
         });
-
     </script>
+
+    <script>
+    const sections = document.querySelectorAll(".section");
+
+    window.addEventListener("scroll", () => {
+
+        sections.forEach(section => {
+
+            const sectionTop = section.getBoundingClientRect().top;
+
+            if (sectionTop < window.innerHeight - 100) {
+                section.style.opacity = "1";
+                section.style.transform = "translateY(0)";
+            }
+
+        });
+
+    });
+</script>
 
 </body>
 
